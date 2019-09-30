@@ -3,7 +3,7 @@
 # Installing Web Dev env for mac os
 # Includes: Homebrew, yarn, node.js, ZSH, git + gitconfig 
 # USAGE
-# ./install.sh
+# ./OSX_DEV_ENV.sh
 
 # SETTINGS
 set -e # Exit if any command returns non-zero.
