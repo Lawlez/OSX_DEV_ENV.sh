@@ -1,8 +1,5 @@
 #!/bin/sh
 
-# Some things taken from here
-# https://github.com/mathiasbynens/dotfiles/blob/master/.osx
-
 pretty_print() {
   printf "\n%b\n" "$1"
 }
@@ -20,12 +17,10 @@ pretty_print "\n###############################################"
 pretty_print "#        DO NOT RUN THIS SCRIPT BLINDLY       #"
 pretty_print "#         YOU'LL PROBABLY REGRET IT...        #"
 pretty_print "#                                             #"
-pretty_print "#              READ IT THOROUGHLY             #"
-pretty_print "#         AND EDIT TO SUIT YOUR NEEDS         #"
+pretty_print "#              SETUP OSX DEV ENV              #"
+pretty_print "#         INSTALLS EXTRAS & OSX SETTINGS      #"
 pretty_print "###############################################\n\n"
-
-pretty_print "Have you read through the script you're about to run and "
-pretty_print "understood that it will make changes to your computer? (y/n)"
+pretty_print "this will make changes to your computer? (y/n)"
 read -r response
 case $response in
   [yY]) CONTINUE=true
@@ -232,40 +227,11 @@ echo "TextEdit - Open and save files as UTF-8 encoding"
 defaults write com.apple.TextEdit PlainTextEncoding -int 4
 defaults write com.apple.TextEdit PlainTextEncodingForWrite -int 4
 
-
 echo "Printer - Automatically quit printer app once the print jobs complete"
 defaults write com.apple.print.PrintingPrefs "Quit When Finished" -bool true
-###############################################################################
-# Sublime Text
-###############################################################################
 
 echo ""
-echo "Do you use Sublime Text 3 as your editor of choice, and is it installed? (y/n)"
-read -r response
-case $response in
-  [yY])
-    # Link subl command to sublime text 
-    echo ""
-    echo "Linking Sublime Text for command line usage as subl"
-    ln -s "/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl" /usr/local/bin/subl
-    break;;
-  *) break;;
-esac
-
-###############################################################################
-# install ZSH
-###############################################################################
-#pretty_print "installig zsh..."
-#brew install zsh
-#sudo mv /etc/zshenv /etc/zprofile
-#cat /etc/shells | grep zsh || which zsh | sudo tee -a /etc/shells
-#chsh -s $(which zsh)
-###############################################################################
-# Kill affected applications
-###############################################################################
-
-echo ""
-pretty_print "Shits Done Bro! You still need to manually install pacakge installer within sublime, download chrome extensions, setup your hotspots/mouse settings, and setup your git shit - look at readme for more info."
+pretty_print "We done! set all the settings for your MacBook"
 echo ""
 echo ""
 pretty_print "################################################################################"

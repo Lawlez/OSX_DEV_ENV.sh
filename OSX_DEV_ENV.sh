@@ -12,40 +12,26 @@ source config.sh
 
 # FUNCTIONS
 source functions.sh
+source scripts/systemsettings.sh
 
 # EXECUTION
 echo ''
 while true; do
   echo "Options:"
-  echo "  b: Apply basic machine settings."
-  echo "  x: Install application extensions (i.e. application enhancements, plug-ins, etc.)"
-  echo "  d: Apply software defaults."
-  echo "  w: Clean work directory."
+  echo "  s: Apply basic machine settings."
   echo "  i: Perform complete install (i.e. basic settings, Homebrew, applications, extensions, defaults, and work directory clean-up)."
   echo "  v: verify status of installed applications and extensions."
   echo "  q: Quit/Exit."
   echo ''
   read -p "Enter selection: " response
   case $response in
-    'b')
-      scripts/basic.sh
-      break;;
-    'x')
-      scripts/extensions.sh
-      break;;
-    'd')
-      scripts/defaults.sh
-      break;;
-    'w')
-      clean_work_path
+    's')
+      scripts/systemsettings.sh
       break;;
     'i')
-      scripts/basic.sh
+      scripts/systemsettings.sh
       scripts/homebrew.sh
-      scripts/applications.sh
-      scripts/extensions.sh
-      scripts/defaults.sh
-      clean_work_path
+      scripts/apps.sh
       break;;
     'v')
       verify_installs
