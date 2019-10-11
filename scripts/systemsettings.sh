@@ -168,7 +168,12 @@ defaults write com.apple.dock show-process-indicators -bool true
 echo "Safari - Hide bookmarks bar"
 defaults write com.apple.Safari ShowFavoritesBar -bool false
 
-
+defaults write NSGlobalDomain AppleInterfaceStyle -string "Dark" ##darkmode
+defaults write NSGlobalDomain AppleHighlightColor -string "0.452941 0.964706 0.478431 Green" ##accentcolor
+defaults write NSGlobalDomain com.apple.mouse.scaling -int 1 ##mousescaling
+defaults write NSGlobalDomain com.apple.sound.beep.flash -int 1 ##beeponerror
+defaults write /Library/Preferences/com.apple.loginwindow AdminHostInfo HostName ##login info in lockscreeen
+defaults write -g ApplePressAndHoldEnabled -bool false ##disable press ndhold for keyrepeatt
 # Set a blazingly fast keyboard repeat rate
 #echo "\nSet a blazingly fast keyboard repeat rate"
 #defaults write NSGlobalDomain KeyRepeat -int 1
