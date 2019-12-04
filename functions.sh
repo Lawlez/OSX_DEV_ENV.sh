@@ -2,7 +2,6 @@
 
 # DESCRIPTION
 # Defines functions for installing and configuring software.
-
 # Answers the file name.
 # Parameters:
 # $1 = The file path.
