@@ -1,6 +1,10 @@
 ###############################################################################
 # Sublime Text
 ###############################################################################
+echo "updating homebrew"
+brew update
+brew upgrade
+brew cleanup
 
 echo ""
 echo "Do you use Sublime Text 3 as your editor of choice, and is it installed? (y/n)"
@@ -48,6 +52,53 @@ case $response in
     echo ""
     echo "getting yarn.."
     brew install yarn
+    break;;
+  *) break;;
+esac
+
+echo ""
+echo "install git CLI? (y/n)"
+read -r response
+case $response in
+  [yY])
+    echo ""
+    echo "getting git.."
+    brew install git
+    git --version
+    break;;
+  *) break;;
+esac
+
+echo ""
+echo "configer GIT? (y/n)"
+read -r response
+case $response in
+  [yY])
+    echo ""
+    echo "What is your github email?"
+    read -r mail
+case $mail in
+  [yY])
+    echo ""
+    echo "setting mail"
+    git config --global user.email "$mail"
+    break;;
+  *) break;;
+esac
+    brew install git
+    git --version
+    break;;
+  *) break;;
+esac
+
+echo ""
+echo "install XCODE CLI? (y/n)"
+read -r response
+case $response in
+  [yY])
+    echo ""
+    echo "getting xcode.."
+    xcode-select --install
     break;;
   *) break;;
 esac
