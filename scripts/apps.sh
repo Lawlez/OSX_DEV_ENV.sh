@@ -15,6 +15,42 @@ case $response in
   *) break;;
 esac
 
+echo ""
+echo "install homebrew?? (y/n)"
+read -r response
+case $response in
+  [yY])
+    echo ""
+    echo "getting homebrew.."
+    /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+    break;;
+  *) break;;
+esac
+
+echo ""
+echo "install NODEJS? (y/n)"
+read -r response
+case $response in
+  [yY])
+    echo ""
+    echo "installing Node.JS.."
+    brew install node
+    node -v
+    break;;
+  *) break;;
+esac
+
+echo ""
+echo "install yarn? (y/n)"
+read -r response
+case $response in
+  [yY])
+    echo ""
+    echo "getting yarn.."
+    brew install yarn
+    break;;
+  *) break;;
+esac
 ###############################################################################
 # install ZSH
 ###############################################################################

@@ -30,7 +30,6 @@ while true; do
       break;;
     'i')
       scripts/systemsettings.sh
-      scripts/homebrew.sh
       scripts/apps.sh
       break;;
     'v')
