@@ -2,10 +2,19 @@
 # base environmet setup
 # homebrew, nodeJS, git, zsh, etc
 ###############################################################################
-echo "updating homebrew"
-brew update
-brew upgrade
-brew cleanup
+echo "update homebrew? y/n"
+read -r response
+case $response in
+  [yY])
+    echo ""
+    echo "getting homebrew.."
+    brew update
+    brew upgrade
+    brew cleanup
+    break;;
+  *) break;;
+esac
+
 
 echo ""
 echo "install homebrew? (y/n)"

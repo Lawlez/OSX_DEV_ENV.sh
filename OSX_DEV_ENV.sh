@@ -1,19 +1,12 @@
 #!/bin/sh
 
 # Installing Web Dev env for mac os
-# Includes: Homebrew, yarn, node.js, ZSH, git + gitconfig 
+# Includes: Homebrew, yarn, node.js, git + gitconfig 
 # USAGE
-# ./OSX_DEV_ENV.sh
+# sh OSX_DEV_ENV.sh
 
 # SETTINGS
 set -e # Exit if any command returns non-zero.
-source config.sh
-
-
-# FUNCTIONS
-source functions.sh
-source scripts/systemsettings.sh
-source scripts/verify.sh
 
 # EXECUTION
 echo ''
@@ -30,8 +23,8 @@ while true; do
       scripts/systemsettings.sh
       break;;
     'i')
-      scripts/systemsettings.sh
       scripts/apps.sh
+      scripts/systemsettings.sh
       break;;
     'v')
       scripts/verify.sh
@@ -40,4 +33,3 @@ while true; do
       break;;
   esac
 done
-echo 'done :3'

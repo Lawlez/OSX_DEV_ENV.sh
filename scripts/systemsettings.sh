@@ -151,7 +151,7 @@ esac
 # Show Path bar in Finder
 echo "\nShow Path bar in Finder"
 defaults write com.apple.finder ShowPathbar -bool true
-echo "Finder - Display full POSIX path as window title"
+echo "\nFinder - Display full POSIX path as window title"
 defaults write com.apple.finder _FXShowPosixPathInTitle -bool true
 
 # Show Status bar in Finder
@@ -162,24 +162,23 @@ defaults write com.apple.finder ShowStatusBar -bool true
 echo "\nShow indicator lights for open applications in the Dock"
 defaults write com.apple.dock show-process-indicators -bool true
 
-echo "\n Enable Dark mode"
+echo "\nEnable Dark mode"
 defaults write NSGlobalDomain AppleInterfaceStyle -string "Dark" ##darkmode
 
-echo "\n Switch accent color"
+echo "\nSwitch accent color"
 defaults write NSGlobalDomain AppleHighlightColor -string "0.152941 0.964706 0.978431" ##accentcolor
 
-echo "\n turn off mouse scaling"
+echo "\nturn off mouse scaling"
 defaults write NSGlobalDomain com.apple.mouse.scaling -int 1 ##mousescaling
 
-echo "\n enable beeponerror"
+echo "\nenable beeponerror"
 defaults write NSGlobalDomain com.apple.sound.beep.flash -int 1 ##beeponerror
 
 #defaults write /Library/Preferences/com.apple.loginwindow AdminHostInfo HostName ##login info in lockscreeen
 
-echo "\n Switch accent color"
+echo "\nSwitch accent color"
 defaults write -g ApplePressAndHoldEnabled -bool false ##disable press ndhold for keyrepeatt
 
-Set a blazingly fast keyboard repeat rate
 echo "\nSet a blazingly fast keyboard repeat rate"
 defaults write NSGlobalDomain KeyRepeat -int 1
 
@@ -247,7 +246,7 @@ case $response in
   [yY])
     defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad Clicking -bool true
     defaults -currentHost write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
-    defaults write NSGlobalDomain com.apple.mouse.tapBehavior -int 
+    defaults write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
     break;;
   *) break;;
 esac

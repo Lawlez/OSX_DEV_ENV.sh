@@ -13,16 +13,6 @@ export WORK_PATH=/private/tmp/downloads # Temporary location for processing of f
 # Homebrew
 export RUBY_VERSION=2.3.7p456
 
-# Applications
-export SUBLIME_TEXT_APP_URL=http://c758482.r82.cf2.rackcdn.com
-export SUBLIME_TEXT_APP_FILE=Sublime%20Text%202.0.1.dmg
-export SUBLIME_TEXT_APP_NAME="Sublime Text 3.app"
-export SUBLIME_TEXT_EXTENSION_ROOT="$HOME/Library/Application Support/Sublime Text 3/Packages"
-
-export PATH_FINDER_APP_URL=http://get.cocoatech.com
-export PATH_FINDER_APP_FILE=PF6_LION.zip
-export PATH_FINDER_APP_NAME="Path Finder.app"
-
 export FIREFOX_APP_URL=http://download.cdn.mozilla.net/pub/mozilla.org/firefox/releases/19.0/mac/en-US
 export FIREFOX_APP_FILE=Firefox%2019.0.dmg
 export FIREFOX_APP_NAME=Firefox.app

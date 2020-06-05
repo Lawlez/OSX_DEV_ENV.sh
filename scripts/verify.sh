@@ -5,17 +5,25 @@ pretty_print() {
 }
 pretty_print "Check installed versions of DEV ENV"
 
-echo "\n checking yarn"
+
+pretty_print "\n checking yarn"
 yarn -v
 
-echo "\n checking NODE"
+pretty_print "\n checking NODE"
 node -v
 
-echo "\n checking git"
+pretty_print "\n checking git"
 git --version
 
-echo "\n checking homebrew"
+pretty_print "\n checking homebrew"
 brew -v
 
+pretty_print "\n checking NPM"
+npm -v
 
-done
+pretty_print "\n checking PHP"
+php -v
+
+pretty_print "\n checking httpd server"
+httpd -v
+
