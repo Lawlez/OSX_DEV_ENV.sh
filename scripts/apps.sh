@@ -1,5 +1,6 @@
 ###############################################################################
-# Sublime Text
+# base environmet setup
+# homebrew, nodeJS, git, zsh, etc
 ###############################################################################
 echo "updating homebrew"
 brew update
@@ -7,20 +8,7 @@ brew upgrade
 brew cleanup
 
 echo ""
-echo "Do you use Sublime Text 3 as your editor of choice, and is it installed? (y/n)"
-read -r response
-case $response in
-  [yY])
-    # Link subl command to sublime text 
-    echo ""
-    echo "Linking Sublime Text for command line usage as subl"
-    ln -s "/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl" /usr/local/bin/subl
-    break;;
-  *) break;;
-esac
-
-echo ""
-echo "install homebrew?? (y/n)"
+echo "install homebrew? (y/n)"
 read -r response
 case $response in
   [yY])
@@ -52,6 +40,7 @@ case $response in
     echo ""
     echo "getting yarn.."
     brew install yarn
+    yarn -v
     break;;
   *) break;;
 esac
@@ -70,7 +59,7 @@ case $response in
 esac
 
 echo ""
-echo "configer GIT? (y/n)"
+echo "configure GIT? (y/n)"
 read -r response
 case $response in
   [yY])
@@ -102,6 +91,7 @@ case $response in
     break;;
   *) break;;
 esac
+
 ###############################################################################
 # install ZSH
 ###############################################################################
