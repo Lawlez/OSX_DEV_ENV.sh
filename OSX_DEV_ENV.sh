@@ -13,6 +13,7 @@ source config.sh
 # FUNCTIONS
 source functions.sh
 source scripts/systemsettings.sh
+source scripts/verify.sh
 
 # EXECUTION
 echo ''
@@ -33,8 +34,7 @@ while true; do
       scripts/apps.sh
       break;;
     'v')
-      verify_installs
-      verify_extensions
+      scripts/verify.sh
       break;;
     'q')
       break;;
